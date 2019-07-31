@@ -3,6 +3,11 @@ $sm: 480px;
 $md: 768px;
 $lg: 1024px;
 
+@mixin squareSize($size) {
+    height: $size;
+    width: $size;
+}
+
 @mixin xs {
     @media (min-width: #{$xs}) {
         @content;

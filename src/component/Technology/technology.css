@@ -1,5 +1,136 @@
 .technology {
   min-height: 100vh;
   width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.backgroundTechnology {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  height: 50%;
+  z-index: -1;
+  width: 100%;
+  background-color: #94c5cc;
+}
+
+.technologyText {
+  position: absolute;
+  top: 0%;
+  left: 15%;
+  color: #94c5cc;
+}
+
+@media (min-width: 0) {
+  .technologyText {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 480px) {
+  .technologyText {
+    font-size: 75px;
+  }
+}
+
+@media (min-width: 768px) {
+  .technologyText {
+    font-size: 100px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .technologyText {
+    font-size: 125px;
+  }
+}
+
+.technologyContainer {
+  min-height: 50%;
+  min-width: 100%;
+  padding: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+.technologyBlock {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2%;
+  margin-right: 15px;
+  background-color: #B4D2E7;
+  opacity: 0.8;
+}
+
+@media (min-width: 0) {
+  .technologyBlock {
+    height: 150px;
+    width: 150px;
+  }
+}
+
+@media (min-width: 480px) {
+  .technologyBlock {
+    height: 200px;
+    width: 200px;
+  }
+}
+
+@media (min-width: 768px) {
+  .technologyBlock {
+    height: 300px;
+    width: 300px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .technologyBlock {
+    height: 400px;
+    width: 400px;
+  }
+}
+
+.technologyBlock img {
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.technologyName {
+  position: absolute;
+  left: -2%;
+  width: 40%;
+  height: 50px;
+  display: block;
+  background-color: black;
+  bottom: 10%;
+  color: white;
+  font-size: xx-large;
+  text-align: center;
 }
 /*# sourceMappingURL=technology.css.map */
