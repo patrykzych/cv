@@ -15,14 +15,18 @@ export default class Menu extends Component {
                         <Col xs={6} md={12}>
                             <div className="d-flex justify-content-center">
                                 <div className="borderLogo">
-                                    PATRYK ZYCH
+                                    Patryk Zych<span style={{color: "red"}}>.</span>
                                 </div>
                             </div>
                         </Col>
                         <Col xs={6} md={12}>
                             <div className="d-flex justify-content-center ">
+                                <i class="d-md-none fas fa-ellipsis-v"></i>
                                 <div className="d-none d-md-block menu">
-                                    HOME TECHNOLOGY ABOUT CONTACT
+                                    <span className="menuPosition clicked">HOME</span> 
+                                    <span className="menuPosition">TECHNOLOGY</span> 
+                                    <span className="menuPosition">ABOUT</span> 
+                                    <span className="menuPosition">CONTACT</span>
                                 </div>
                             </div>
                         </Col>

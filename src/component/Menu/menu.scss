@@ -1,7 +1,7 @@
 $break-small: 768px;
 
 .borderLogo {
-    border: medium solid #b4d2e7;
+    // border: medium solid #b4d2e7;
     color: #b4d2e7;
     text-align: center;
     @media screen and (max-width: $break-small) {
@@ -12,8 +12,8 @@ $break-small: 768px;
         font-size: 25px;
     }
     @media screen and (min-width: $break-small) {
-        margin-top: 15px;
-        font-size: 70px;
+        margin-top: 5px;
+        font-size: 120px;
         min-height: 100px;
     }
 }
@@ -22,4 +22,18 @@ $break-small: 768px;
     margin-top: 15px;
     color: #a1a6b4;
     font-size: large;
+    border-bottom: thin solid #a1a6b4;
+    padding-bottom: 5px;
+}
+
+.menuPosition {
+    padding-right: 5px;
+    &:hover {
+        color: #94C5CC;
+        cursor: pointer;
+    }
+}
+
+.clicked {
+    color: #94C5CC;
 }
