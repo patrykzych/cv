@@ -1,17 +1,17 @@
-$break-small: 768px;
+@import "../../css/variables";
 
 .borderLogo {
     // border: medium solid #b4d2e7;
     color: #b4d2e7;
     text-align: center;
-    @media screen and (max-width: $break-small) {
+    @media screen and (max-width: $md) {
         margin-left: 25px;
         margin-top:5px;
         min-height: 50px;
         min-width: 180px;
         font-size: 25px;
     }
-    @media screen and (min-width: $break-small) {
+    @media screen and (min-width: $md) {
         margin-top: 5px;
         font-size: 120px;
         min-height: 100px;

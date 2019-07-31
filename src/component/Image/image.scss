@@ -1,0 +1,30 @@
+@import "../../css/variables";
+
+.mainImage {
+    min-height: 100vh;
+    background-color: grey;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.textImage {
+    color: white;
+    text-align: center;
+    @include xs {
+        font-size: 60px;
+    }
+
+    @include sm {
+        font-size: 60px;
+    }
+
+    @include md {
+        font-size: 100px;
+    }
+
+    @include lg {
+        font-size: 130px;
+    }
+}
