@@ -6,8 +6,11 @@ import Col from "react-bootstrap/Col";
 import "./menu.css";
 
 export default class Menu extends Component {
-
+    constructor(props) {
+        super(props);
+    }
     render() {
+        console.log(this.technology)
         return(
             <React.Fragment>
                 <Container>
@@ -21,10 +24,10 @@ export default class Menu extends Component {
                         </Col>
                         <Col xs={6} md={12}>
                             <div className="d-flex justify-content-center ">
-                                <i class="d-md-none fas fa-ellipsis-v"></i>
+                                <i className="d-md-none fas fa-ellipsis-v"></i>
                                 <div className="d-none d-md-block menu">
-                                    <span className="menuPosition clicked">HOME</span> 
-                                    <span className="menuPosition">TECHNOLOGY</span> 
+                                    <span className="menuPosition clicked" onClick={() => this.props.executeScroll(this.props.home)}>HOME</span> 
+                                    <span className="menuPosition" onClick={() => this.props.executeScroll(this.props.technology)}>TECHNOLOGY</span> 
                                     <span className="menuPosition">ABOUT</span> 
                                     <span className="menuPosition">CONTACT</span>
                                 </div>

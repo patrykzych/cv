@@ -10,7 +10,7 @@ class Image extends Component {
         const { current } = this.ref;
         window.addEventListener('scroll', function(e){
             var scrolled = window.pageYOffset;
-            var coords = '0% '+ (- (scrolled *0.3) + 'px');
+            var coords = '0% '+ (- (scrolled *0.1) + 'px');
             current.style.backgroundPosition  = coords;
           });
     };
