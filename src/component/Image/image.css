@@ -1,6 +1,5 @@
-.mainImage {
+.mainImageContainer {
   min-height: 100vh;
-  background-color: grey;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11,41 +10,56 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-position: 0 0;
+  z-index: 2;
+}
+
+.mainImage {
+  min-height: 100vh;
+  width: 100%;
+  background-color: transparent;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attached: fixed;
-  background-image: url(https://images.unsplash.com/photo-1548404412-f27160c85ecb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1616&q=80);
+  background-image: url("../../image/background.svg");
   position: relative;
   min-height: 100vh;
+  z-index: 1;
 }
 
 .textImage {
-  color: white;
+  position: absolute;
+  z-index: 0;
+  opacity: 0.5;
   text-align: center;
+  font-family: 'Anton', sans-serif;
+  color: #23232b;
 }
 
 @media (min-width: 0) {
   .textImage {
-    font-size: 60px;
+    font-size: 80px;
+    bottom: 30%;
   }
 }
 
 @media (min-width: 480px) {
   .textImage {
     font-size: 60px;
+    bottom: 30%;
   }
 }
 
 @media (min-width: 768px) {
   .textImage {
     font-size: 100px;
+    bottom: 0;
   }
 }
 
 @media (min-width: 1024px) {
   .textImage {
-    font-size: 130px;
+    font-size: 150px;
+    bottom: 0;
   }
 }
 /*# sourceMappingURL=image.css.map */

@@ -1,0 +1,19 @@
+@import './css/variables';
+
+body html {
+    background-color: $color0;
+    scroll-behavior: smooth;
+  }
+.container{
+    background-color: $color0;
+    margin:0;
+    padding:0;
+    min-width: 100%;
+}
+  html::-webkit-scrollbar {
+    display: none;
+  }
+  .space {
+    min-height: 50px;
+    background-color: transparent;
+  }

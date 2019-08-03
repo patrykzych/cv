@@ -2,7 +2,7 @@
 
 .borderLogo {
     // border: medium solid #b4d2e7;
-    color: #b4d2e7;
+    color: $color1;
     text-align: center;
     @media screen and (max-width: $md) {
         margin-left: 25px;
@@ -13,16 +13,17 @@
     }
     @media screen and (min-width: $md) {
         margin-top: 5px;
-        font-size: 120px;
+        font-size: 150px;
         min-height: 100px;
     }
+    font-family: 'Anton', sans-serif;
 }
 
 .menu{
     margin-top: 15px;
-    color: #a1a6b4;
+    color: $color1;
     font-size: large;
-    border-bottom: thin solid #a1a6b4;
+    border-bottom: thin solid $color1;
     padding-bottom: 5px;
 }
 

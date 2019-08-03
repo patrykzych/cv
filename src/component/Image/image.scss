@@ -1,38 +1,52 @@
 @import "../../css/variables";
-
-.mainImage {
+.mainImageContainer {
     min-height: 100vh;
-    background-color: grey;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 2;
+}
+.mainImage {
+    min-height: 100vh;
+    width: 100%;
 
-    background-position: 0 0;
+    background-color: transparent;
+    background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-    background-attached:fixed;
-    background-image:url(https://images.unsplash.com/photo-1548404412-f27160c85ecb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1616&q=80);
+    background-image:url('../../image/background.svg');
     position: relative;
     min-height: 100vh;
+    z-index: 1;
+
 }
 
 .textImage {
-    color: white;
+    position: absolute;
+    z-index: 0;
+    opacity: 0.5;
     text-align: center;
+    
     @include xs {
-        font-size: 60px;
+        font-size: 80px;
+        bottom: 30%;
     }
 
     @include sm {
         font-size: 60px;
+        bottom: 30%;
     }
 
     @include md {
         font-size: 100px;
+        bottom: 0;
     }
 
     @include lg {
-        font-size: 130px;
+        font-size: 150px;
+        bottom: 0;
     }
+    font-family: 'Anton', sans-serif;
+    color: $color1;
 }

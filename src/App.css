@@ -1,8 +1,21 @@
 body html {
-  background-color: #F8F8F8;
+  background-color: #ced7df;
   scroll-behavior: smooth;
+}
+
+.container {
+  background-color: #ced7df;
+  margin: 0;
+  padding: 0;
+  min-width: 100%;
+}
+
+html::-webkit-scrollbar {
+  display: none;
 }
 
 .space {
   min-height: 50px;
+  background-color: transparent;
 }
+/*# sourceMappingURL=App.css.map */

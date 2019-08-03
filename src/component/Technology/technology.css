@@ -1,7 +1,23 @@
 .technology {
   min-height: 100vh;
-  width: 100%;
+  min-width: 100vw;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+}
+
+.technologyTextContainer {
+  min-height: 100vh;
+  min-width: 100%;
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -20,14 +36,11 @@
   height: 50%;
   z-index: -1;
   width: 100%;
-  background-color: #94c5cc;
+  background-color: #2BDBFF;
 }
 
 .technologyText {
-  position: absolute;
-  top: 0%;
-  left: 15%;
-  color: #94c5cc;
+  color: #a1a6b4;
 }
 
 @media (min-width: 0) {
@@ -50,27 +63,26 @@
 
 @media (min-width: 1024px) {
   .technologyText {
-    font-size: 125px;
+    font-size: 100px;
   }
 }
 
+.technologyContainerBottom {
+  position: absolute;
+  min-height: 40%;
+  max-width: 100%;
+  bottom: 0;
+}
+
 .technologyContainer {
-  min-height: 50%;
-  min-width: 100%;
-  padding: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
+  padding-left: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 50vh;
 }
 
 .technologyBlock {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -80,38 +92,10 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 2%;
-  margin-right: 15px;
-  background-color: #B4D2E7;
-  opacity: 0.8;
-}
-
-@media (min-width: 0) {
-  .technologyBlock {
-    height: 150px;
-    width: 150px;
-  }
-}
-
-@media (min-width: 480px) {
-  .technologyBlock {
-    height: 200px;
-    width: 200px;
-  }
-}
-
-@media (min-width: 768px) {
-  .technologyBlock {
-    height: 300px;
-    width: 300px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .technologyBlock {
-    height: 400px;
-    width: 400px;
-  }
+  padding: 15%;
+  margin-bottom: 5px;
+  margin-right: 0px;
+  opacity: 0.7;
 }
 
 .technologyBlock img {
