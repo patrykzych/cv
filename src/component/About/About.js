@@ -27,37 +27,76 @@ class About extends Component {
         super(props);
         this.state = {
             animateTechnology: this.props.animateTechnology,
-            imageTop: this.props.imageTop,
-            aboutTop: this.props.aboutTop,
-            sizeMan: 20,
+            manOnCenter: false,
+            style: {
+                sizeMan: 20,
+                position: "absolute"
+            }
         }
     }
 
-    componentDidMount = () => {
-        var difference = this.props.aboutTop - this.props.imageTop;
-        console.log(this.state.aboutTop)
-        console.log(difference)
-        document.addEventListener('scroll', () => {
-          if(window.scrollY >= this.props.imageTop && window.scrollY <= this.props.aboutTop) {
+    man = React.createRef();
 
-            this.setState({
-              animateTechnology: true,
-            })
-          }
-        });
+    componentDidMount = () => {
+        var manTop = ReactDOM.findDOMNode(this.man.current).getBoundingClientRect();
+        this.setState({
+            manTop: manTop.top
+        })
+        window.addEventListener('scroll', this.handleScroll);
+        this.updateWindowDimensions();
+        window.addEventListener('resize', this.updateWindowDimensions);
+    }
+
+    componentWillUnmount = () => {
+        window.removeEventListener('scroll', this.handleScroll);
+        window.removeEventListener('resize', this.updateWindowDimensions);
+    }
+
+    updateWindowDimensions = () => {
+        this.setState({ width: window.innerWidth, height: window.innerHeight });
       }
 
-    render() {
-        var style = {
-            minHeight: `${this.state.sizeMan}vh`
+    handleScroll = () => {
+        console.log("wejszlo")
+        let scrollTop = window.scrollY
+                
+        let minHeight = 20,
+        sizeMan = Math.max(minHeight, (scrollTop/2290)*80);
+        if(scrollTop>326 && scrollTop < 3000) {
+            console.log(this.state.height/2)
+            if(scrollTop >= this.state.manTop) {
+                this.setState({
+                    manOnCenter: true,
+                    style: {
+                        sizeMan: sizeMan,
+                    }
+                });
+            } else {
+                this.setState({
+                    manOnCenter: false,
+                    style: {
+                        sizeMan: sizeMan,
+                    }
+                });
+            }
         }
+    }
+
+    render() {
+        console.log(this.state.manTop);
         return (
-            <div className="aboutContainer">
+            <React.Fragment>
+            <div  className="aboutContainer">
+            <div id="wave-container">
+  <div id="wave">
+  </div>
+</div>
                 <div className="aboutBackground1"></div>
+
                 <div className="aboutBackground2"></div>
                 <div className="aboutTextContainer"><div className="aboutText">Technology</div></div>
-                <div className="aboutMan"><img style={style} src={man}></img></div>
-                <Container>
+                <div ref={this.man} className={this.state.manOnCenter ? '' : 'aboutMan'} ><img className={this.state.manOnCenter ? 'manOnCenter' : ''} style={{"minHeight": `${this.state.style.sizeMan}vh`, "maxHeight": `${this.state.style.sizeMan}vh`, "maxWidth": `${this.state.style.sizeMan}vh`}} src={man}></img></div>
+                <Container >
                     <Row className={this.props.animateTechnology ? 'float animate stay' : 'stay'}>
                         <Col xs={3} md={1} ><div className="aboutBlock"><img src={git}></img></div></Col>
                         <Col xs={3} md={{span: 1, offset: 0}} ><div className="aboutBlock"><img src={html}></img></div></Col>
@@ -72,8 +111,22 @@ class About extends Component {
                         <Col xs={3} md={{span: 1, offset: 0}}><div className="aboutBlock"><img src={sass}></img></div></Col>
                         {/* <Col xs={3} md={{span: 1, offset: 0}}><div className="aboutBlock"><img src={bootstrap}></img></div></Col> */}
                     </Row>
+                    <Row className="aboutNames">
+                        <Col xs={3} md={1} ><div className="aboutNamesBlock">Git</div></Col>
+                        <Col xs={3} md={{span: 1, offset: 0}} ><div className="aboutNamesBlock">html</div></Col>
+                        <Col md={1} xs={3}><div className="aboutNamesBlock">css</div></Col>
+                        <Col xs={3} md={{span: 1, offset: 0}}><div className="aboutNamesBlock">js</div></Col>
+                        <Col md={1} xs={3}><div className="aboutNamesBlock">mongodb</div></Col>
+                        <Col xs={{span: 2, offset: 2}} md={{span: 2, offset: 0}}></Col>
+                        <Col md={1} xs={3}><div className="aboutNamesBlock">mysql</div></Col>
+                        <Col md={1} xs={3}><div className="aboutNamesBlock">node</div></Col>
+                        <Col xs={3} md={{span: 1, offset: 0}}><div className="aboutNamesBlock">npm</div></Col>
+                        <Col md={1} xs={3}><div className="aboutNamesBlock">React</div></Col>
+                        <Col xs={3} md={{span: 1, offset: 0}}><div className="aboutNamesBlock">sass</div></Col>
+                    </Row>
                 </Container>
             </div>
+            </React.Fragment>
         )
     }
 }

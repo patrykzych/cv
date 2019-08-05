@@ -49,10 +49,8 @@ export default class Technology extends Component {
     render() {
         return(
             <React.Fragment>
-                <Container style={{"minHeight": "100vh"}}>
-                <Row >
-
-                </Row>
+                <Container className="technologyContainer" style={{"minHeight": "100vh"}}>
+                    <div className="technologyText">About Me</div>
                 </Container>
             </React.Fragment>
         )

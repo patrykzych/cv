@@ -1,5 +1,7 @@
 @import './css/variables';
-
+.underMenu{
+  background-color: $menu-bottom;
+}
 body html {
     background-color: $color0;
     scroll-behavior: smooth;
@@ -15,5 +17,4 @@ body html {
   }
   .space {
     min-height: 50px;
-    background-color: transparent;
   }

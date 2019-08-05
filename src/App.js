@@ -36,15 +36,14 @@ class App extends Component {
       aboutTop: aboutTop.top,
     })
     document.addEventListener('scroll', () => {
-      console.log(window.scrollY)
-      console.log(this.state.technologyTop)
-      if(window.scrollY >= this.state.technologyTop-50) {
+      if(window.scrollY >= this.state.aboutTop-50) {
         this.setState({
           animateTechnology: true,
         })
       }
     });
   }
+  
 
   handleScrollToStats = (reff) => {
     window.scrollTo({
@@ -57,11 +56,12 @@ class App extends Component {
     return (
       <div class="container" ref={this.home}>
         <Menu home={this.home} technology={this.technology} about={this.about} executeScroll={this.handleScrollToStats}/>
-        <div className="space" ></div>
+        <div className="space underMenu" ></div>
         <Image ref={this.image} />
         <div className=""  ref={this.technology} ></div>
-        <About animateTechnology={this.state.animateTechnology} aboutTop={this.state.aboutTop} imageTop={this.state.imageTop}/>
         <div className="" ref={this.about} ></div>
+        <About toTop={this.state.aboutTop} animateTechnology={this.state.animateTechnology}/>
+        <div className="" ref={this.technology}></div>
         <Technology  />
       </div>
     );

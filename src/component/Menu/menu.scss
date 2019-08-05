@@ -1,5 +1,8 @@
 @import "../../css/variables";
-
+.menuBackground {
+    background-image: linear-gradient($menu-top, $menu-bottom);
+    background-color: red;
+}
 .borderLogo {
     // border: medium solid #b4d2e7;
     color: $color1;

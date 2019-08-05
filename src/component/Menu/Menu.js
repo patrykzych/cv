@@ -13,7 +13,7 @@ export default class Menu extends Component {
     render() {
         return(
             <React.Fragment>
-                <Container>
+                <Container className="menuBackground">
                     <Row>
                         <Col xs={6} md={12}>
                             <div className="d-flex justify-content-center">

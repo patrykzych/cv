@@ -1,3 +1,9 @@
+.menuBackground {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#741515), to(red));
+  background-image: linear-gradient(#741515, red);
+  background-color: red;
+}
+
 .borderLogo {
   color: #23232b;
   text-align: center;
