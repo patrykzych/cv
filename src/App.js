@@ -5,6 +5,7 @@ import Menu from "./component/Menu";
 import Image from "./component/Image";
 import Technology from "./component/Technology";
 import About from "./component/About";
+import Contact from './component/Contact'
 
 import logo from './logo.svg';
 import './App.css';
@@ -22,6 +23,7 @@ class App extends Component {
   home = React.createRef();
   about = React.createRef();
   image = React.createRef();
+  contact = React.createRef();
 
   componentDidMount = () => {
     var technologyTop = ReactDOM.findDOMNode(this.technology.current)
@@ -55,7 +57,7 @@ class App extends Component {
   render() {
     return (
       <div class="container" ref={this.home}>
-        <Menu home={this.home} technology={this.technology} about={this.about} executeScroll={this.handleScrollToStats}/>
+        <Menu contact={this.contact} home={this.home} technology={this.technology} about={this.about} executeScroll={this.handleScrollToStats}/>
         <div className="space underMenu" ></div>
         <Image ref={this.image} />
         <div className=""  ref={this.technology} ></div>
@@ -63,6 +65,8 @@ class App extends Component {
         <About toTop={this.state.aboutTop} animateTechnology={this.state.animateTechnology}/>
         <div className="" ref={this.technology}></div>
         <Technology  />
+        <div className="" ref={this.contact}></div>
+        <Contact />
       </div>
     );
   }

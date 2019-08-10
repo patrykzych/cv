@@ -1,9 +1,14 @@
 .contactText {
-  position: absolute;
-  top: 0;
-  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  bottom: 0 !important;
+  color: white;
   z-index: 1;
-  opacity: 0.1;
+  opacity: 0.9;
 }
 
 @media (min-width: 0) {
@@ -26,7 +31,138 @@
 
 @media (min-width: 1024px) {
   .contactText {
-    font-size: 180px;
+    font-size: 280px;
   }
+}
+
+.contactContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#01015f), to(#010124));
+  background-image: linear-gradient(to bottom, #01015f, #010124);
+}
+
+.contactWhaleContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  min-height: 80%;
+  min-width: 80%;
+}
+
+.contactWhale {
+  z-index: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 25px;
+  border: 15px solid white;
+  position: absolute;
+  background-color: #0B314D;
+  min-width: 80%;
+  min-height: 100%;
+}
+
+.contactWhale:hover .contactWhaleEye {
+  height: 5px;
+  top: 62%;
+}
+
+.contactWhale:hover .contactWhaleTeeth {
+  height: 20%;
+  bottom: 5%;
+}
+
+.contactWhaleHole {
+  top: -15px;
+  position: absolute;
+  height: 35px;
+  width: 35px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.contactUnderTeeth {
+  position: absolute;
+  min-width: 100%;
+  min-height: 10%;
+  bottom: 0;
+  background-color: #550202;
+  text-align: center;
+  color: white;
+  line-height: 100%;
+}
+
+.contactWhaleTeeth {
+  border: 15px solid white;
+  border-bottom: 0px;
+  border-radius: 90% 90% 25px 25px;
+  position: absolute;
+  bottom: 0;
+  min-width: calc(100% + 30px);
+  height: 25%;
+  -webkit-transition: bottom 0.25s, height 0.25s;
+  transition: bottom 0.25s, height 0.25s;
+  background: repeating-linear-gradient(90deg, #ECC667, #ECC667 2px, #EFD27D 2px, #EFD27D 50px);
+}
+
+.contactWhaleEye {
+  position: absolute;
+  height: 45px;
+  min-width: 45px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+  top: 60%;
+  -webkit-transition: top 0.25s, height 0.25s;
+  transition: top 0.25s, height 0.25s;
+}
+
+.contactWhaleLeftEye {
+  left: 5%;
+}
+
+.contactWhaleRightEye {
+  right: 5%;
+}
+
+.contactFormContainer {
+  position: absolute;
+  top: 10%;
+  min-height: 90%;
+}
+
+.contactFormContainer .row {
+  margin-top: 15px;
+}
+
+.contactMessage {
+  min-height: 100px;
+}
+
+.contactButton {
+  min-width: 100%;
+  margin-top: 15px;
 }
 /*# sourceMappingURL=contact.css.map */

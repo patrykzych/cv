@@ -51,6 +51,19 @@
           transform: translate(-50%, -50%);
   height: auto;
   width: auto;
+  -webkit-animation: sideWays 4s ease-in-out infinite alternate;
+          animation: sideWays 4s ease-in-out infinite alternate;
+}
+
+.manInAbout {
+  z-index: 3;
+  position: absolute;
+  width: 15%;
+  left: 50%;
+  height: auto;
+  width: auto;
+  -webkit-animation: sideWays 4s ease-in-out infinite alternate;
+          animation: sideWays 4s ease-in-out infinite alternate;
 }
 
 .aboutTextContainer {
@@ -98,20 +111,39 @@
 }
 
 .aboutBlock img {
-  -webkit-filter: drop-shadow(2px 2px 2px #222);
-  filter: drop-shadow(2px 2px 2px #222);
   height: auto;
   width: auto;
   max-width: 100%;
   max-height: 100%;
 }
 
+@-webkit-keyframes sideWays {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: 15px;
+  }
+}
+
+@keyframes sideWays {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: 15px;
+  }
+}
+
 .aboutNames {
+  -webkit-animation: sideWays 4s ease-in-out infinite alternate;
+          animation: sideWays 4s ease-in-out infinite alternate;
   opacity: 0.3;
   z-index: 3;
   position: absolute;
   top: 55%;
   width: 100%;
+  color: #1c0b79;
 }
 
 @media (min-width: 0) {
@@ -203,6 +235,7 @@
 }
 
 .float {
+  position: relative;
   -webkit-animation-name: floating;
           animation-name: floating;
   -webkit-animation-delay: 0.5s;
@@ -283,6 +316,8 @@
   border-radius: 100%;
   width: 100%;
   height: 300px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(blue), to(#0505ce));
+  background-image: linear-gradient(to bottom, blue, #0505ce);
   background-color: blue;
   right: -25%;
   top: 20px;

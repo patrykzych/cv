@@ -32,7 +32,7 @@ export default class Menu extends Component {
                                     <span className="menuPosition" onClick={() => this.props.executeScroll(this.props.home)}>HOME</span> 
                                     <span className="menuPosition" onClick={() => this.props.executeScroll(this.props.technology)}>TECHNOLOGY</span> 
                                     <span className="menuPosition" onClick={() => this.props.executeScroll(this.props.about)}>ABOUT</span> 
-                                    <span className="menuPosition">CONTACT</span>
+                                    <span className="menuPosition" onClick={() => this.props.executeScroll(this.props.contact)}>CONTACT</span>
                                 </div>
                             </div>
                         </Col>

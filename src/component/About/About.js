@@ -32,6 +32,7 @@ class About extends Component {
         this.state = {
             animateTechnology: this.props.animateTechnology,
             manOnCenter: false,
+            manInAbout: false,
             style: {
                 cloudRight: 0,
                 sizeMan: 20,
@@ -73,13 +74,22 @@ class About extends Component {
         cloudRightThree = Math.max(minRight, (scrollTop/2290)*50);
         if(scrollTop>326 && scrollTop < 3000) {
             console.log(this.state.height/2)
-            if(scrollTop >= this.state.manTop) {
+            if(scrollTop >= this.state.manTop && scrollTop <= this.state.manTop + this.state.height) {
                 this.setState({
                     manOnCenter: true,
+                    manInAbout: false,
                     style: {
                         cloudRightOne: cloudRightOne,
                         cloudRightTwo: cloudRightTwo,
                         cloudRightThree: cloudRightThree,
+                        sizeMan: sizeMan,
+                    }
+                });
+            } else if(scrollTop >= this.state.manTop + this.state.height) {
+                this.setState({
+                    manOnCenter: false,
+                    manInAbout: true,
+                    style: {
                         sizeMan: sizeMan,
                     }
                 });
@@ -120,7 +130,7 @@ class About extends Component {
                 </div>
                 <div className="aboutBackground2"></div>
                 <div className="aboutTextContainer"><div className="aboutText">Technology</div></div>
-                <div ref={this.man} className={this.state.manOnCenter ? '' : 'aboutMan'} ><img className={this.state.manOnCenter ? 'manOnCenter' : ''} style={{"minHeight": `${this.state.style.sizeMan}vh`, "maxHeight": `${this.state.style.sizeMan}vh`, "maxWidth": `${this.state.style.sizeMan}vh`}} src={man}></img></div>
+                <div ref={this.man} className={this.state.manOnCenter ? '' : 'aboutMan'} ><img className={this.state.manInAbout ? '' : ''} className={this.state.manOnCenter ? 'manOnCenter' : ''} style={{"minHeight": `${this.state.style.sizeMan}vh`, "maxHeight": `${this.state.style.sizeMan}vh`, "maxWidth": `${this.state.style.sizeMan}vh`}} src={man}></img></div>
                 <Container >
                     <Row className={this.props.animateTechnology ? 'float animate stay' : 'stay'}>
                         <Col xs={3} md={1} ><div className="aboutBlock"><img src={git}></img></div></Col>

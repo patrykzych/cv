@@ -16,6 +16,7 @@ $logo-color: rgb(155, 155, 155);
 $water-top: blue;
 $water-middle: rgb(2, 2, 175);
 $water-bottom: rgb(1, 1, 95);
+$water-deep: rgb(1, 1, 36);
 
 @mixin squareSize($size) {
     height: $size;

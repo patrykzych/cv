@@ -9,7 +9,7 @@
     background-image: linear-gradient($image-top, $image-bottom);
 }
 .mainImage {
-    min-height: 100vh;
+    min-height: 70vh;
     width: 100%;
     z-index:5;
     background-color: transparent;
@@ -18,7 +18,6 @@
 	background-size: cover;
     background-image:url('../../image/background.svg');
     position: relative;
-    min-height: 100vh;
     z-index: 1;
 
 }
