@@ -84,7 +84,7 @@ class About extends Component {
                         cloudRightThree: cloudRightThree,
                         sizeMan: sizeMan,
                     }
-                });
+                }); 
             } else if(scrollTop >= this.state.manTop + this.state.height) {
                 this.setState({
                     manOnCenter: false,

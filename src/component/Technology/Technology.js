@@ -51,13 +51,34 @@ export default class Technology extends Component {
             <React.Fragment>
 
                 <Container className="technologyContainer" style={{"minHeight": "100vh"}}>
-                <div id="bubbles">
-        <div className="bubble x1"></div>
-        <div className="bubble x2"></div>
-        <div className="bubble x3"></div>
-        <div className="bubble x4"></div>
-        <div className="bubble x5"></div>
-</div>
+                    <div className="technologyFishContainer technologyFish-1">
+                        <div className="technologyFishBody technologyFishColor-1">
+                            <div className="technologyFin technologyFishColor-1"></div>
+                            <div className="technologyFinBottom technologyFishColor-1"></div>
+                            <div className="technologyFishEye"></div>
+                        </div>
+                    </div>
+                    <div className="technologyFishContainer technologyFish-2">
+                        <div className="technologyFishBody technologyFishColor-2">
+                            <div className="technologyFin technologyFishColor-2"></div>
+                            <div className="technologyFinBottom technologyFishColor-2"></div>
+                            <div className="technologyFishEye"></div>
+                        </div>
+                    </div>
+                    <div className="technologyFishContainer technologyFish-3">
+                        <div className="technologyFishBody technologyFishColor-3">
+                            <div className="technologyFin technologyFishColor-3"></div>
+                            <div className="technologyFinBottom technologyFishColor-3"></div>
+                            <div className="technologyFishEye"></div>
+                        </div>
+                    </div>
+                    <div id="bubbles">
+                        <div className="bubble x1"></div>
+                        <div className="bubble x2"></div>
+                        <div className="bubble x3"></div>
+                        <div className="bubble x4"></div>
+                        <div className="bubble x5"></div>
+                    </div>
                     <div className="technologyText">About Me</div>
                 </Container>
             </React.Fragment>

@@ -42,7 +42,7 @@
     animation: moveclouds 7s linear infinite, sideWays 1s ease-in-out infinite alternate;
 }
 @keyframes moveclouds {
-    0% {
+    0% { 
         top: 180vh;
     }
     100% {
@@ -85,3 +85,82 @@
         font-size: 120px;
     }
 }
+@keyframes particleAnimation
+{
+    from {
+        right: -100px;
+    }
+    to {
+        right: calc( 100% + 100px );
+    }
+}
+.technologyFishContainer {
+    position: absolute;
+    animation-name:particleAnimation;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.technologyFish-1{
+    animation-duration:10s;
+    top:20%;
+    min-height: 50px;
+    min-width: 100px;
+  }
+  .technologyFish-2{
+    animation-duration:5s;
+    top:50%;
+    min-height: 30px;
+    min-width: 80px;
+  }
+  .technologyFish-3{
+    animation-duration:15s;
+    top:60%;
+    min-height: 100px;
+    min-width: 150px;
+  }
+.technologyFishColor-1 {
+    background-color: orange;
+}
+.technologyFishColor-2 {
+    background-color: green;
+}
+.technologyFishColor-3 {
+    background-color: pink;
+}
+.technologyFishBody {
+    border-radius: 90% 90% 90% 70%;
+    position: absolute;
+    min-height: 100%;
+    min-width: 80%;
+    left: 0;
+    
+}
+.technologyFishEye {
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    height: 15px;
+    min-width: 15px;
+    background-color: white;
+    background-image: radial-gradient(circle, black, white, white);
+    border-radius: 50%;
+    display: inline-block;
+}
+.technologyFin {
+    position: absolute;
+    right:-10%;
+    border-radius: 50%;
+    transform: rotate(50deg);
+    width: 20%;
+    height: 70%;
+  }
+  
+  .technologyFinBottom {
+    position: absolute;
+    top:10%;
+    right:-10%;
+    border-radius: 50%;
+    transform: rotate(130deg);
+    width: 20%;
+    height: 70%;
+  }
