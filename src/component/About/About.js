@@ -18,6 +18,10 @@ import react from '../../image/react.png';
 import sass from '../../image/sass.png';
 import bootstrap from '../../image/bootstrap.png';
 
+import cloud from '../../image/cloudOne.png';
+import cloudtwo from '../../image/cloudTwo.png';
+import cloudthree from '../../image/cloud3.png';
+
 
 import "./about.css";
 
@@ -29,6 +33,7 @@ class About extends Component {
             animateTechnology: this.props.animateTechnology,
             manOnCenter: false,
             style: {
+                cloudRight: 0,
                 sizeMan: 20,
                 position: "absolute"
             }
@@ -61,13 +66,20 @@ class About extends Component {
         let scrollTop = window.scrollY
                 
         let minHeight = 20,
-        sizeMan = Math.max(minHeight, (scrollTop/2290)*80);
+        minRight = 0,
+        sizeMan = Math.max(minHeight, (scrollTop/2290)*80),
+        cloudRightOne = Math.max(minRight, (scrollTop/2290)*20),
+        cloudRightTwo = Math.max(minRight, (scrollTop/2290)*40),
+        cloudRightThree = Math.max(minRight, (scrollTop/2290)*50);
         if(scrollTop>326 && scrollTop < 3000) {
             console.log(this.state.height/2)
             if(scrollTop >= this.state.manTop) {
                 this.setState({
                     manOnCenter: true,
                     style: {
+                        cloudRightOne: cloudRightOne,
+                        cloudRightTwo: cloudRightTwo,
+                        cloudRightThree: cloudRightThree,
                         sizeMan: sizeMan,
                     }
                 });
@@ -75,6 +87,9 @@ class About extends Component {
                 this.setState({
                     manOnCenter: false,
                     style: {
+                        cloudRightOne: cloudRightOne,
+                        cloudRightTwo: cloudRightTwo,
+                        cloudRightThree: cloudRightThree,
                         sizeMan: sizeMan,
                     }
                 });
@@ -83,16 +98,26 @@ class About extends Component {
     }
 
     render() {
-        console.log(this.state.manTop);
+        var cloudOne = 25 + this.state.style.cloudRightOne;
+        var cloudTwo = 0 + this.state.style.cloudRightTwo;
+        var cloud3 = -50 + this.state.style.cloudRightThree;
         return (
             <React.Fragment>
             <div  className="aboutContainer">
             <div id="wave-container">
-  <div id="wave">
-  </div>
-</div>
+                <div id="wave"></div>
+            </div>
                 <div className="aboutBackground1"></div>
-
+                <div class="sun"></div>
+                <div style={{"right": `${cloudTwo}%`}} class="cloud">
+                    <img src={cloudtwo}></img>
+                </div>
+                <div style={{"right": `${cloudOne}%`}} class="cloud">
+                    <img  src={cloud}></img>
+                </div>
+                <div style={{"right": `${cloud3}%`}} class="cloud">
+                    <img  src={cloudthree}></img>
+                </div>
                 <div className="aboutBackground2"></div>
                 <div className="aboutTextContainer"><div className="aboutText">Technology</div></div>
                 <div ref={this.man} className={this.state.manOnCenter ? '' : 'aboutMan'} ><img className={this.state.manOnCenter ? 'manOnCenter' : ''} style={{"minHeight": `${this.state.style.sizeMan}vh`, "maxHeight": `${this.state.style.sizeMan}vh`, "maxWidth": `${this.state.style.sizeMan}vh`}} src={man}></img></div>

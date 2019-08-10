@@ -1,11 +1,54 @@
 @import "../../css/variables";
+@keyframes particleAnimation
+{
+    from {
+        left: -100px;
+    }
+    to {
+        left: calc( 100% + 100px );
+    }
+}
+.meteor{
+    position:absolute;
+    left:0px;
+    top:5%;
+    width:1px;
+    height:1px;
+    background-color:white;
+    animation-name:particleAnimation;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  .meteor::before{
+    position:absolute;
+    display:block;
+    content:"";
+    width:100px;
+    right:1px;
+    top:0px;
+    height:1px;
+    background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(255,255,255,0.4)); 
+  }
+  .meteor-1{
+    animation-duration:10s;
+  }
+  .meteor-2{
+    animation-duration:5s;
+    top:60%;
+  }
+  .meteor-3{
+    animation-duration:20s;
+    top:90%;
+  }
 .menuBackground {
     background-image: linear-gradient($menu-top, $menu-bottom);
-    background-color: red;
+    background-color: transparent;
+    height: 100%;
+    position: relative;
 }
 .borderLogo {
     // border: medium solid #b4d2e7;
-    color: $color1;
+    color: $logo-color;
     text-align: center;
     @media screen and (max-width: $md) {
         margin-left: 25px;
@@ -24,7 +67,7 @@
 
 .menu{
     margin-top: 15px;
-    color: $color1;
+    color: $logo-color;
     font-size: large;
     border-bottom: thin solid $color1;
     padding-bottom: 5px;

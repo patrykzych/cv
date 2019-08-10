@@ -1,11 +1,75 @@
+@-webkit-keyframes particleAnimation {
+  from {
+    left: -100px;
+  }
+  to {
+    left: calc( 100% + 100px);
+  }
+}
+
+@keyframes particleAnimation {
+  from {
+    left: -100px;
+  }
+  to {
+    left: calc( 100% + 100px);
+  }
+}
+
+.meteor {
+  position: absolute;
+  left: 0px;
+  top: 5%;
+  width: 1px;
+  height: 1px;
+  background-color: white;
+  -webkit-animation-name: particleAnimation;
+          animation-name: particleAnimation;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.meteor::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100px;
+  right: 1px;
+  top: 0px;
+  height: 1px;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), to(rgba(255, 255, 255, 0.4)));
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.4));
+}
+
+.meteor-1 {
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+}
+
+.meteor-2 {
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  top: 60%;
+}
+
+.meteor-3 {
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s;
+  top: 90%;
+}
+
 .menuBackground {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#741515), to(red));
-  background-image: linear-gradient(#741515, red);
-  background-color: red;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(black), to(#01013a));
+  background-image: linear-gradient(black, #01013a);
+  background-color: transparent;
+  height: 100%;
+  position: relative;
 }
 
 .borderLogo {
-  color: #23232b;
+  color: #9b9b9b;
   text-align: center;
   font-family: 'Anton', sans-serif;
 }
@@ -30,7 +94,7 @@
 
 .menu {
   margin-top: 15px;
-  color: #23232b;
+  color: #9b9b9b;
   font-size: large;
   border-bottom: thin solid #23232b;
   padding-bottom: 5px;

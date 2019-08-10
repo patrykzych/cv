@@ -65,8 +65,6 @@
     }
 }
 .aboutBlock {
-    
-    z-index: 2;
     max-height: 80px;
     max-width: 80px;
     padding: 4%;
@@ -103,6 +101,7 @@
 }
 .aboutNamesBlock{
     text-align: center;
+    
 }
 .stay {
     @include xs {
@@ -121,6 +120,7 @@
         margin-top: 10%;
     }
     transition: all 1s;
+    z-index: 7;
 }
 
 @keyframes floating {
@@ -149,6 +149,7 @@
     @include lg {
         margin-top: -7%;
     }
+    z-index: 7;
 }
 .aboutBackground1 {
     position: absolute;
@@ -156,7 +157,8 @@
     top:0;
     min-height: 50%;
     min-width: 100%;
-    background-image: radial-gradient(300px at center, red, yellow, yellow);
+    background-color: #2EB5E5;
+    // background-image: radial-gradient(300px at center, red, #2EB5E5, #2EB5E5);
     // background-image: linear-gradient(to bottom, $color0, $color2);
 }
 .aboutBackground2 {
@@ -166,7 +168,7 @@
     bottom:0;
     min-height: 50%;
     min-width: 100%;
-    background-image: linear-gradient(to bottom, blue, rgb(51, 51, 247));
+    background-image: linear-gradient(to bottom, $water-top, $water-middle);
 }
 #wave-container {
     position: absolute;
@@ -178,10 +180,11 @@
   }
   
   #wave {
+      z-index: -1;
     display: block;
     position: relative;
     height: 40px;
-    background: yellow;
+
   }
   
   #wave:before {
@@ -203,7 +206,41 @@
     border-radius: 100%;
     width: 100%;
     height: 300px;
-    background-color: yellow;
+    background-color: #2EB5E5;
     left: -25%;
     top: -240px;
+    z-index:-1;
+  }
+
+  .sun { 
+    position: absolute;
+    z-index: 10;
+      top:0;
+      left:0;
+      right:0;
+      bottom:60%;
+      margin: auto;  
+      width:70px;
+      height:70px;
+      border-radius:50%;	
+      background:white;
+      opacity:0.9;			
+      box-shadow: 0px 0px 40px 15px white;  
+  }
+  .cloud { 
+    position: absolute;
+    z-index: 10;
+      top:0;
+      left:0;
+      bottom:60%;
+      margin: auto;  
+      width:150px;
+      height:150px;
+      opacity: 0.8;
+      & img {
+        height:auto;
+        width:auto;
+        max-width:100%;
+        max-height:100%;
+    }
   }

@@ -8,10 +8,14 @@ $color1: #23232b;
 $color2: #acb5bd;
 $color3: #2BDBFF;
 $color4: #317691;
-$menu-top: rgb(116, 21, 21);
-$menu-bottom: red;
+$menu-top: black; //#2EB5E5
+$menu-bottom: rgb(1, 1, 58);
 $image-top: $menu-bottom;
-$image-bottom: rgb(89, 89, 240);
+$image-bottom: #2EB5E5;
+$logo-color: rgb(155, 155, 155);
+$water-top: blue;
+$water-middle: rgb(2, 2, 175);
+$water-bottom: rgb(1, 1, 95);
 
 @mixin squareSize($size) {
     height: $size;

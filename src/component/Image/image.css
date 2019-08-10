@@ -11,8 +11,8 @@
       -ms-flex-pack: center;
           justify-content: center;
   z-index: 2;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(red), to(yellow));
-  background-image: linear-gradient(red, yellow);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#01013a), to(#2EB5E5));
+  background-image: linear-gradient(#01013a, #2EB5E5);
 }
 
 .mainImage {

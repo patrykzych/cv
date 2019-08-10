@@ -49,7 +49,15 @@ export default class Technology extends Component {
     render() {
         return(
             <React.Fragment>
+
                 <Container className="technologyContainer" style={{"minHeight": "100vh"}}>
+                <div id="bubbles">
+        <div className="bubble x1"></div>
+        <div className="bubble x2"></div>
+        <div className="bubble x3"></div>
+        <div className="bubble x4"></div>
+        <div className="bubble x5"></div>
+</div>
                     <div className="technologyText">About Me</div>
                 </Container>
             </React.Fragment>

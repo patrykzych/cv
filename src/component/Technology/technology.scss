@@ -1,7 +1,67 @@
 @import '../../css/variables';
+#bubbles { min-height: 100%; min-width: 100%;position: absolute; padding: 100px;}
+.bubble {
+    z-index:3;
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 200px;
+    -moz-border-radius: 200px;
+    -webkit-border-radius: 200px;
+    position: absolute;
+}
+
+.x1 {
+    transform: scale(0.9);
+    opacity: 0.2;
+    animation: moveclouds 15s linear infinite, sideWays 4s ease-in-out infinite alternate;
+}
+
+.x2 {
+    left: 20%;
+    transform: scale(0.6);
+    opacity: 0.5;
+    animation: moveclouds 25s linear infinite, sideWays 5s ease-in-out infinite alternate;
+}
+.x3 {
+    left: 35%;
+    transform: scale(0.8);
+    opacity: 0.3;
+    animation: moveclouds 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+}
+.x4 {
+    left: 60%;
+    transform: scale(0.75);
+    opacity: 0.35;
+    animation: moveclouds 18s linear infinite, sideWays 2s ease-in-out infinite alternate;
+}
+.x5 {
+    left: 80%;
+    transform: scale(0.8);
+    opacity: 0.3;
+    animation: moveclouds 7s linear infinite, sideWays 1s ease-in-out infinite alternate;
+}
+@keyframes moveclouds {
+    0% {
+        top: 100vh;
+    }
+    100% {
+        top: -20vh;
+    }
+}
+
+@keyframes sideWays {
+    0% {
+        margin-left:0px;
+    }
+    100% {
+        margin-left:50px;
+    }
+}
 .technologyContainer{
     position: relative;
     min-height: 100vh;
+    background-image: linear-gradient($water-middle, $water-bottom);
 }
 .technologyText {
     position: absolute;

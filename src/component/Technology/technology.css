@@ -1,6 +1,106 @@
+#bubbles {
+  min-height: 100%;
+  min-width: 100%;
+  position: absolute;
+  padding: 100px;
+}
+
+.bubble {
+  z-index: 3;
+  width: 60px;
+  height: 60px;
+  background: white;
+  border-radius: 200px;
+  -moz-border-radius: 200px;
+  -webkit-border-radius: 200px;
+  position: absolute;
+}
+
+.x1 {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  opacity: 0.2;
+  -webkit-animation: moveclouds 15s linear infinite, sideWays 4s ease-in-out infinite alternate;
+          animation: moveclouds 15s linear infinite, sideWays 4s ease-in-out infinite alternate;
+}
+
+.x2 {
+  left: 20%;
+  -webkit-transform: scale(0.6);
+          transform: scale(0.6);
+  opacity: 0.5;
+  -webkit-animation: moveclouds 25s linear infinite, sideWays 5s ease-in-out infinite alternate;
+          animation: moveclouds 25s linear infinite, sideWays 5s ease-in-out infinite alternate;
+}
+
+.x3 {
+  left: 35%;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  opacity: 0.3;
+  -webkit-animation: moveclouds 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+          animation: moveclouds 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+}
+
+.x4 {
+  left: 60%;
+  -webkit-transform: scale(0.75);
+          transform: scale(0.75);
+  opacity: 0.35;
+  -webkit-animation: moveclouds 18s linear infinite, sideWays 2s ease-in-out infinite alternate;
+          animation: moveclouds 18s linear infinite, sideWays 2s ease-in-out infinite alternate;
+}
+
+.x5 {
+  left: 80%;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  opacity: 0.3;
+  -webkit-animation: moveclouds 7s linear infinite, sideWays 1s ease-in-out infinite alternate;
+          animation: moveclouds 7s linear infinite, sideWays 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes moveclouds {
+  0% {
+    top: 100vh;
+  }
+  100% {
+    top: -20vh;
+  }
+}
+
+@keyframes moveclouds {
+  0% {
+    top: 100vh;
+  }
+  100% {
+    top: -20vh;
+  }
+}
+
+@-webkit-keyframes sideWays {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: 50px;
+  }
+}
+
+@keyframes sideWays {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: 50px;
+  }
+}
+
 .technologyContainer {
   position: relative;
   min-height: 100vh;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#0202af), to(#01015f));
+  background-image: linear-gradient(#0202af, #01015f);
 }
 
 .technologyText {

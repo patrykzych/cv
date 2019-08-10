@@ -14,6 +14,9 @@ export default class Menu extends Component {
         return(
             <React.Fragment>
                 <Container className="menuBackground">
+                <div class="meteor meteor-1"></div>
+                <div class="meteor meteor-2"></div>
+                <div class="meteor meteor-3"></div>
                     <Row>
                         <Col xs={6} md={12}>
                             <div className="d-flex justify-content-center">
